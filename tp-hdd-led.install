@@ -1,0 +1,7 @@
+note() {
+    printf "${blue}==>${yellow} NOTE:${bold} $1${all_off}\n"
+}
+
+post_install() {
+    note "Start with     'systemctl start hdd_led'\nAutostart with 'systemctl enable tp-hdd-led'"
+}
