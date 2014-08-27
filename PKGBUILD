@@ -27,7 +27,8 @@ noextract=()
 
 md5sums=('d897ecad631d82a7ba5e6a20486b75e8'
          '78e2fcca40a023ed6cf702604ea39d87'
-         'f366d0875d3b869f206f16a06c345f40')
+         'f366d0875d3b869f206f16a06c345f40'
+         '5d4b354d3a94b5696dc4ba4afac59c06')
 package() {
   cd "${srcdir}"
   mkdir -p $pkgdir/usr/lib/systemd/system
