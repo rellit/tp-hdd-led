@@ -1,6 +1,6 @@
 # Maintainer: Tim Herbst <mail@timherbst.de>
 pkgname=hdd_led
-pkgver=1.0.1
+pkgver=1.0.2
 pkgrel=1
 epoch=
 pkgdesc="Use Thinkpad Think-LED as HDD led"
