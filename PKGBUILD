@@ -17,7 +17,7 @@ conflicts=()
 replaces=()
 backup=()
 options=()
-install=
+install={$pkgname}.install
 changelog=
 source=(https://raw.githubusercontent.com/herbstmensch/tp-hdd-led/master/tp-hdd-led.py
         https://raw.githubusercontent.com/herbstmensch/tp-hdd-led/master/tp-hdd-led.service
@@ -35,12 +35,4 @@ package() {
   install -m644 tp-hdd-led.service "${pkgdir}/usr/lib/systemd/system"
   install -m755 tp-hdd-led.py "${pkgdir}/usr/share/${pkgname}"
   install -D -m644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
-}
-
-note() {
-    printf "${blue}==>${yellow} NOTE:${bold} $1${all_off}\n"
-}
-
-post_install() {
-    note "Start with     'systemctl start hdd_led'\nAutostart with 'systemctl enable tp-hdd-led'"
 }
