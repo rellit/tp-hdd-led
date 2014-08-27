@@ -32,8 +32,8 @@ package() {
   mkdir -p $pkgdir/usr/lib/systemd/system
   mkdir -p $pkgdir/usr/share/$pkgname
   mkdir -p $pkgdir/usr/share/licenses/$pkgname
-  install -m644 hdd_led.service "${pkgdir}/usr/lib/systemd/system"
-  install -m755 hdd_led.py "${pkgdir}/usr/share/${pkgname}"
+  install -m644 tp-hdd-led.service "${pkgdir}/usr/lib/systemd/system"
+  install -m755 tp-hdd-led.py "${pkgdir}/usr/share/${pkgname}"
   install -D -m644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
 
