@@ -1,6 +1,6 @@
 # Maintainer: Tim Herbst <mail@timherbst.de>
-pkgname=hdd_led
-pkgver=1.0.2
+pkgname=tp-hdd-led
+pkgver=1.0.3
 pkgrel=1
 epoch=
 pkgdesc="Use Thinkpad Think-LED as HDD led"
@@ -19,8 +19,8 @@ backup=()
 options=()
 install=
 changelog=
-source=(https://raw.githubusercontent.com/herbstmensch/tp-hdd-led/master/hdd_led.py
-        https://raw.githubusercontent.com/herbstmensch/tp-hdd-led/master/hdd_led.service
+source=(https://raw.githubusercontent.com/herbstmensch/tp-hdd-led/master/tp-hdd-led.py
+        https://raw.githubusercontent.com/herbstmensch/tp-hdd-led/master/tp-hdd-led.service
         https://raw.githubusercontent.com/herbstmensch/tp-hdd-led/master/LICENSE)
 noextract=()
 md5sums=('d897ecad631d82a7ba5e6a20486b75e8'
@@ -37,6 +37,10 @@ package() {
   install -D -m644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
 
+note() {
+    printf "${blue}==>${yellow} NOTE:${bold} $1${all_off}\n"
+}
+
 post_install() {
-    note "Start with     'systemctl start hdd_led'\nAutostart with 'systemctl enable hdd_led'"
+    note "Start with     'systemctl start hdd_led'\nAutostart with 'systemctl enable tp-hdd-led'"
 }
