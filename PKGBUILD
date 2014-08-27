@@ -38,6 +38,5 @@ package() {
 }
 
 post_install() {
-  echo "Start with     'systemctl start hdd_led'"
-  echo "Autostart with 'systemctl enable hdd_led'"
+    note "Start with     'systemctl start hdd_led'\nAutostart with 'systemctl enable hdd_led'"
 }
