@@ -4,7 +4,7 @@ DefaultDependencies=true
 Wants=graphical.target
 
 [Service]
-ExecStart=/usr/share/hdd_led/hdd_led.py
+ExecStart=/usr/share/tp-hdd-led/tp-hdd-led.py
 
 [Install]
 WantedBy=multi-user.target
