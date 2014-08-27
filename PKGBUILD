@@ -21,7 +21,8 @@ install={$pkgname}.install
 changelog=
 source=(https://raw.githubusercontent.com/herbstmensch/tp-hdd-led/master/tp-hdd-led.py
         https://raw.githubusercontent.com/herbstmensch/tp-hdd-led/master/tp-hdd-led.service
-        https://raw.githubusercontent.com/herbstmensch/tp-hdd-led/master/LICENSE)
+        https://raw.githubusercontent.com/herbstmensch/tp-hdd-led/master/LICENSE
+        https://raw.githubusercontent.com/herbstmensch/tp-hdd-led/master/$pkgname.install)
 noextract=()
 
 md5sums=('d897ecad631d82a7ba5e6a20486b75e8'
@@ -36,3 +37,6 @@ package() {
   install -m755 tp-hdd-led.py "${pkgdir}/usr/share/${pkgname}"
   install -D -m644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
+
+
+
