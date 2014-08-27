@@ -17,7 +17,7 @@ conflicts=()
 replaces=()
 backup=()
 options=()
-install={$pkgname}.install
+install=$pkgname.install
 changelog=
 source=(https://raw.githubusercontent.com/herbstmensch/tp-hdd-led/master/tp-hdd-led.py
         https://raw.githubusercontent.com/herbstmensch/tp-hdd-led/master/tp-hdd-led.service
